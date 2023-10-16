@@ -1,9 +1,17 @@
+const Hello = (props) => {
+
+  console.log(props);
+  return (
+    <p>Hello, Guest!</p>
+  )
+}
+
 const App = () => {
   return(
     <div>
-      <h1>App Component</h1>
-      <p>Hello World</p>
-      
+      <h1>Greetings</h1>
+      <Hello name='Marcus' />
+      <Hello name='jesus' />
     </div>
 
   ) 

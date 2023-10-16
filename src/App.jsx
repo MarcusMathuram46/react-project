@@ -1,6 +1,11 @@
-const App = () => {
+function App() {
+
+  console.log('Hello from Component');
+  
   return(
-    <p>Hello World!</p>
+    <div>
+      <p>Hello World!</p>
+    </div>
   );
 }
 

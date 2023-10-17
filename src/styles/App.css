@@ -1,0 +1,43 @@
+.price-cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    background: linear-gradient(to right, #036bf4, #31abfe);
+}
+.price-card {
+    border: solid 1px #ccc;
+    padding: 20px;
+    text-align: left;
+    width: 250px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: white ;
+}
+
+button {
+    padding: 15px;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: #036bf4;
+    text-align: center;
+}
+#grey1 {
+    color: #96949d;
+    font-size: small;
+    text-align: center;
+}
+#grey {
+    color: #bbbabe;
+}
+h1 {
+    text-align: center;
+}
+
+button[disabled] {
+    background-color: #31abfe;
+    cursor: not-allowed;
+    color: white;
+}

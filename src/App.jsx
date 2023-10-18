@@ -7,31 +7,30 @@
 */
 
 import React, { useState } from 'react';
+import Display from './components/Display';
 
 function App() {
 
   const [counter, setCounter] = useState(0);
 
-
-  function handleClickAdd() {
+  function handlePlusClick() {
     setCounter(counter + 1);
   }
-  function handleClickSub() {
+
+  function handleMinusClick() {
     setCounter(counter - 1);
   }
-  function handleClickZero() {
+
+  function handleZeroClick() {
     setCounter(0);
   }
 
   return (
     <div>
-      <div>
-      <p>{ counter }</p>
-      <button onClick={handleClickAdd}>plus</button>
-      <button onClick={handleClickSub}>minus</button>
-      <button onClick={handleClickZero}>zero</button>
-      </div>
-    
+      <Display counter={ counter } />
+      <button onClick={handlePlusClick}>plus</button>
+      <button onClick={handleMinusClick}>minus</button>
+      <button onClick={handleZeroClick}>zero</button>
     </div>
   )
 }

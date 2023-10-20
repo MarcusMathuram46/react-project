@@ -8,7 +8,7 @@ function ChildComponent({ message }) {
       <h1>ChildComponent</h1>
       <p>Message from Parent: { message }</p>
       <hr></hr>
-      <GrandChildComponent message={ message } />
+      <GrandChildComponent message={ message } coins={ coins } />
     </div>
   )
 }

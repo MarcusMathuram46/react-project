@@ -1,32 +1,17 @@
-import React from 'react';
-import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Home from './components/Home';
-import Notes from './components/Notes';
-import Users from './components/Users';
-import Note from './components/Note';
+import React, { useState } from "react";
+import ChildComponent from './component/ChildComponent';
 
-function App({notes}) {
+function App() {
 
-  const padding = {
-    padding: 5,
-  }
-
+  const [message, setMessage]= useState('hello, Grand Child');
+  const [coins, setCoins] = useState([1, 2, 3, 4, 5])
   return (
-    <Router>
-      <div>
-        <Link to='/' style={padding}>home</Link>
-        <Link to='/notes' style={padding}>notes</Link>
-        <Link to='/users' style={padding}>users</Link>
-      </div>
-
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/notes' element={<Notes notes={ notes } />} />
-        <Route path='/users' element={<Users />} />
-        <Route path='/notes/:noteid' element={<Note notes={ notes } /> } />
-      </Routes>
-    </Router>
+    <div>
+      <h1>parent Component</h1>
+      <hr></hr>
+      <ChildComponent message={ message } coins={ coins } />
+    </div>
   )
 }
 
-export default App;
+export default App
